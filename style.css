@@ -1,0 +1,444 @@
+/* RESET ALL */
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+/* MAIN */
+
+html, body
+{
+    height: 100%;
+    width: 100%;
+    font-family: 'Space Mono', serif;
+}
+
+body
+{
+    background-color: hsl(185, 41%, 84%);
+}
+
+h2
+{
+    font-size: 15px;
+}
+
+::placeholder
+{
+    color: hsl(184, 14%, 56%);
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0;
+}
+
+input
+{
+    appearance: textfield;
+    caret-color: hsl(172, 67%, 45%);
+}
+
+input:focus
+{
+    outline: 3px solid hsl(172, 67%, 45%);
+}
+
+/* CONTAINER */
+.container
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* TITLE */
+.splitter
+{
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.splitter h1
+{
+    font-size: 23px;
+    letter-spacing: 10px;
+    color: hsl(183, 100%, 15%);
+}
+
+/* CALCULATOR */
+.calculator
+{
+    background-color: white;
+    width: 55%;
+    height: 55%;
+    border-radius: 35px;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* LEFT CALCULATOR */
+.left-calculator
+{
+    width: 48%;
+    padding: 10px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.left-calculator h2
+{
+    color: hsl(186, 14%, 43%);
+}
+
+.left-calculator input
+{
+    width: 100%;
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: hsl(189, 41%, 97%);
+    border: none;
+    border-radius: 7px;
+    margin-top: 7px;
+    text-align: right;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Space Mono', serif;
+}
+
+/* BILL */
+#bill
+{
+    background: url("icon-dollar.svg") no-repeat left;
+    background-origin: content-box;
+    background-color: hsl(189, 41%, 97%);
+    border: none;
+    border-radius: 7px;
+    color: hsl(183, 100%, 15%);
+}
+
+/* TIP */
+#enter-tip
+{
+    width: 30%;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Space Mono', serif;
+    color: hsl(183, 100%, 15%);
+    margin: 0;
+}
+
+.tip-btn-container
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    row-gap: 13px;
+    justify-content: space-between;
+    margin-top: 13px;
+    flex-wrap: wrap;
+}
+
+.tip
+{
+    width: 30%;
+    height: 50px;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 7px;
+    border: none;
+    font-family: 'Space Mono', serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.tip:hover
+{
+    background-color: hsl(172, 67%, 80%);
+    color: hsl(183, 100%, 15%);
+}
+
+#selected-tip
+{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+/* NUMBER OF PEOPLE */
+.people-title
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#enter-nb-people
+{
+    background: url("icon-person.svg") no-repeat left;
+    background-color: hsl(189, 41%, 97%);
+    background-origin: content-box;
+    color: hsl(183, 100%, 15%);
+}
+
+/* CAN'T BE ZERO DISPLAY */
+#allowed
+{
+    display: none;
+}
+
+#not-allowed
+{
+    display: flex;
+    color: red;
+}
+
+#not-allowed-border
+{
+    outline: 3px solid red;
+    background: url("icon-person.svg") no-repeat left;
+    background-color: hsl(189, 41%, 97%);
+    background-origin: content-box;
+    color: hsl(183, 100%, 15%);
+}
+
+/* RIGHT */
+
+.right-calculator
+{
+    width: 48%;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* AMOUNTS */
+.amounts
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.amount-container
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.amount-container h2
+{
+    font-size: 18px;
+    color: white;
+}
+
+.tip-amount p, .total p
+{
+    font-size: 14px;
+    color:hsl(184, 14%, 56%);
+}
+
+.tip-container
+{
+    margin-top: 10px;
+}
+
+.price-container
+{
+    display: flex;
+    flex-direction: row;
+    font-size: 45px;
+    color: hsl(172, 67%, 45%);
+}
+
+/* RESET BUTTON */
+.reset-btn-container
+{
+    width: 100%;
+    height: 50px;
+}
+
+.reset-btn
+{
+    width: 100%;
+    height: 50px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    background-color: hsl(172, 67%, 45%);
+    border: none;
+    color: hsl(183, 100%, 15%);
+    font-family: 'Space Mono', serif;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.reset-btn:hover
+{
+    background-color: hsl(172, 67%, 80%);
+}
+
+
+
+/* RESPONSIVE */
+
+@media all and (max-width: 400px)
+{
+    /* CONTAINER */
+    .container
+    {
+        justify-content: space-between;
+    }
+
+    /* TITLE */
+    .splitter
+    {
+        width: 100%;
+        height: 40%;
+        margin-bottom: 30px;
+        margin-top: 40px;
+    }
+    
+    /* CALCULATOR */
+    .calculator
+    {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        border-radius: 35px 35px 0 0;
+        padding: 30px;
+    }
+
+    /* LEFT => UP */
+    .left-calculator
+    {
+        width: 100%;
+        padding: 0;
+        padding-right: 0;
+        row-gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    /* TIP BUTTONS */
+    .tip-btn-container
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        row-gap: 13px;
+        justify-content: space-between;
+        margin-top: 13px;
+        flex-wrap: wrap;
+    }
+
+    .tip
+    {
+        width: 47%;
+        height: 50px;
+        background-color: hsl(183, 100%, 15%);
+        border-radius: 7px;
+        border: none;
+        font-family: 'Space Mono', serif;
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+        cursor: pointer;
+    }
+
+    #enter-tip
+    {
+        width: 47%;
+    }
+
+    /* Number of people */
+    .right-calculator
+    {
+        width: 100%;
+        padding: 25px;
+    }
+
+    /* RIGHT => DOWN */
+    .amounts
+    {
+        row-gap: 0;
+    }
+
+    .amount-container
+    {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .amount-container h2
+    {
+        font-size: 16px;
+    }
+
+    .tip-amount p, .total p
+    {
+        font-size: 13px;
+        color:hsl(184, 14%, 56%);
+    }
+
+    .tip-container
+    {
+        margin-top: 10px;
+    }
+
+    .price-container
+    {
+        display: flex;
+        flex-direction: row;
+        font-size: 30px;
+        color: hsl(172, 67%, 45%);
+    }
+
+    /* RESET BUTTON */
+    .reset-btn-container
+    {
+        margin-top: 12px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

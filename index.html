@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet"> 
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="splitter">
+        <h1>SPLI</h1>
+        <h1>TTER</h1>
+      </div>
+
+      <div class="calculator">
+        <div class="left-calculator">
+          <div class="bill-container">
+
+            <h2>Bill</h2>
+
+            <div class="bill-price">
+              <input type="number" name="bill" id="bill" class="enter-value" placeholder="0" onblur="setBill(this.value)">
+            </div>
+
+          </div>
+
+          <div class="select-tip">
+            <h2>Select Tip %</h2>
+
+            <div class="tip-btn-container">
+
+              <button type="submit" class="tip" value="5" onclick="selectedBtn(this.value); clearTipField()">5%</button>
+              <button type="submit" class="tip" value="10" onclick="selectedBtn(this.value); clearTipField()">10%</button>
+              <button type="submit" class="tip" value="15" onclick="selectedBtn(this.value); clearTipField()">15%</button>
+              <button type="submit" class="tip" value="25" onclick="selectedBtn(this.value); clearTipField()">25%</button>
+              <button type="submit" class="tip" value="50" onclick="selectedBtn(this.value); clearTipField()">50%</button>
+              <input type="number" name="tip" id="enter-tip" class="enter-value" placeholder="Custom" onclick="unselectBtn()" onblur="setTip(this.value)">
+
+            </div>
+          </div>
+
+          <div class="number-people">
+            <div class="people-title">
+              <h2>Number of People</h2>
+              <h2 id="allowed">Can't be zero</h2>
+            </div>
+
+            <div class="nb-people">
+              <input type="number" name="numberPeople" id="enter-nb-people" class="enter-value" placeholder="0" onblur="isNotAllowed(this.value); setNbPeople(this.value)">
+            </div>
+
+          </div>
+        </div>
+
+        <div class="right-calculator">
+          <div class="amounts">
+
+            <div class="tip-container amount-container">
+              <div class="tip-amount">
+                <h2>Tip Amount</h2>
+                <p>/ person</p>
+              </div>
+
+              <div class="price-container">
+                <p>$</p>
+                <p id="price1">0.00</p>
+              </div>
+            </div>
+
+            <div class="total-container amount-container">
+              <div class="total">
+                <h2>Total</h2>
+                <p>/ person</p>
+              </div>
+
+              <div class="price-container">
+                <p>$</p>
+                <p id="price2">0.00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="reset-btn-container">
+            <button type="submit" class="reset-btn" onclick="document.location.reload(true)">Reset</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
